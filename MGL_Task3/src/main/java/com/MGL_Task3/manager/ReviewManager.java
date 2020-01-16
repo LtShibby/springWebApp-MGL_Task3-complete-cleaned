@@ -16,6 +16,4 @@ public interface ReviewManager {
 
     Review deleteReview(Long id);
 
-    void deleteReviews(Long game_id);
-
 }

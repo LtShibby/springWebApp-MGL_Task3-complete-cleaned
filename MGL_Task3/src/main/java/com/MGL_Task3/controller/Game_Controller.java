@@ -28,7 +28,6 @@ public class Game_Controller {
 
     @RequestMapping(value = MGL_Endpoint_Constants.FETCH_ALL_GAMES, method = RequestMethod.GET)
     public ResponseEntity<List<Game>> fetchAllGames() {
-	System.out.println("inside game controller fetch all games in front end");
 	return new ResponseEntity<>(gameManager.listGames(), HttpStatus.OK);
     }
 

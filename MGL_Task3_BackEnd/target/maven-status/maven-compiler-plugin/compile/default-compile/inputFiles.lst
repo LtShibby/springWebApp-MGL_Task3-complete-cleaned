@@ -11,8 +11,8 @@ C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\manager
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\controller\MGL_Task3_Controller.java
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\service\Game_Service_Impl.java
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\controller\Game_Controller.java
+C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\configuration\JpaConfiguration.java
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\Application.java
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\manager\GameManagerImpl.java
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\service\Review_Service_Impl.java
 C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\manager\GameManager.java
-C:\eclipse201912-workspace\MGL_Task3_BackEnd\src\main\java\com\MGL_Task3\configuration\HibernateConfiguration.java

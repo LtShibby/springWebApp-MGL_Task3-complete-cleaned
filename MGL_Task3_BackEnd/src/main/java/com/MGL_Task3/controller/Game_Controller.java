@@ -47,8 +47,6 @@ public class Game_Controller {
     @RequestMapping(value = MGL_Endpoint_Constants.DELETE_GAME, method = RequestMethod.PUT)
     public ResponseEntity<?> deleteGame(@RequestBody String game_id) {
 	Optional<Game> gameToDelete = gameManager.getGame(Long.valueOf(game_id));
-	System.out.println("Game to delete on back end: " + gameToDelete);
-	System.out.println();
 	gameManager.deleteGame((Long.valueOf(game_id)));
 	return new ResponseEntity<>(gameToDelete, HttpStatus.OK);
     }

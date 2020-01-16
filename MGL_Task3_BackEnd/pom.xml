@@ -29,14 +29,13 @@
 		</pluginManagement>
 	</build>
 	<properties>
-		<hibernate.version>5.3.7.Final</hibernate.version>
+		<!-- <hibernate.version>5.3.7.Final</hibernate.version>
 		<mysql.connector.version>8.0.13</mysql.connector.version>
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<javaxServlet.version>1.2</javaxServlet.version>
-		<jackson.version>2.9.6</jackson.version>
 		<cglib.version>2.2.2</cglib.version>
 		<javaxServletApi.version>4.0.0</javaxServletApi.version>
-		<jodaTime.version>2.10.5</jodaTime.version>
+		<jodaTime.version>2.10.5</jodaTime.version> -->
 		<jadira.version>7.0.0.CR1</jadira.version>
 	</properties>
 	<dependencies>

@@ -39,9 +39,4 @@ public class ReviewManagerImpl implements ReviewManager {
 	return reviewService.getReviewAndDelete(id);
     }
 
-    @Override
-    public void deleteReviews(Long review_game_id) {
-	reviewService.deleteReviews(review_game_id);
-    }
-
 }

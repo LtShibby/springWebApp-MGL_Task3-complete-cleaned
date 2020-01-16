@@ -35,24 +35,20 @@ public class Review_Controller {
 
     @RequestMapping(value = MGL_Endpoint_Constants.UPDATE_FORM, method = RequestMethod.GET)
     public ModelAndView updateForm(@RequestParam("review_id") String review_id) {
-	System.out.println("inside beginning of update form in front end");
 	ModelAndView updateReviewModelAndView = new ModelAndView("reviewUpdateForm");
 	Review currentReview = reviewManager.getReview(Long.valueOf(review_id));
 	updateReviewModelAndView.addObject("currentReview", currentReview);
-	System.out.println("inside end of update review in front end returning model and view");
 	return updateReviewModelAndView;
     }
 
     @RequestMapping(value = MGL_Endpoint_Constants.DELETE_REVIEW, method = RequestMethod.GET)
     public String deleteReview(@RequestParam("review_id") Long review_id) {
-	// Review review = reviewManager.getReview(Long.valueOf(review_id));
 	Review deletedReview = reviewManager.deleteReview(Long.valueOf(review_id));
 	return "redirect:/reviewsForGame?review_game_id=" + deletedReview.getReview_game_id();
     }
 
     @RequestMapping(value = MGL_Endpoint_Constants.UPDATE_REVIEW, method = RequestMethod.POST)
     public String updateReview(@ModelAttribute Review updatedReview) {
-	System.out.println("inside update review in front end");
 	reviewManager.updateReview(updatedReview);
 	return "redirect:/reviewsForGame?review_game_id=" + updatedReview.getReview_game_id();
     }

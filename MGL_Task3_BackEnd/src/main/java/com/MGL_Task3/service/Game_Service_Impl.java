@@ -20,40 +20,30 @@ public class Game_Service_Impl implements Game_Service {
     @Override
     @Transactional
     public void saveGame(Game game) {
-	System.out.println("About to call repository.save for game in back end");
-	System.out.println();
 	gameRepository.save(game);
     }
 
     @Override
     @Transactional
     public void updateGame(Game game) {
-	System.out.println("About to call repository.save for update for game in back end");
-	System.out.println();
 	gameRepository.save(game);
     }
 
     @Override
     @Transactional
     public Optional<Game> getGame(Long id) {
-	System.out.println("About to call repository.getOne for game in back end");
-	System.out.println();
 	return gameRepository.findById(id);
     }
 
     @Override
     @Transactional
     public void deleteGame(Long id) {
-	System.out.println("About to call repository.delete for game in back end");
-	System.out.println();
 	gameRepository.deleteById(id);
     }
 
     @Override
     @Transactional
     public List<Game> listGames() {
-	System.out.println("About to call repository.findAll for game in back end");
-	System.out.println();
 	return gameRepository.findAll();
     }
 

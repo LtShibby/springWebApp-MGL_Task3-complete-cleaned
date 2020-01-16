@@ -30,24 +30,19 @@ public class Review_Controller {
 
     @RequestMapping(value = MGL_Endpoint_Constants.UPDATE_FORM, method = RequestMethod.GET)
     public Review updateForm(@RequestParam("review_id") String review_id) {
-	System.out.println("^^^^^^^^inside review controller update form");
 	Review review = reviewManager.getReviewForUpdate(Long.valueOf(review_id));
 	return review;
     }
 
     @RequestMapping(value = MGL_Endpoint_Constants.DELETE_REVIEW, method = RequestMethod.GET)
     public ResponseEntity<?> deleteReview(@RequestParam("review_id") String review_id) {
-	System.out.println("beginning of delete review in backend");
 	Optional<Review> reviewToDelete = reviewManager.getReview(Long.valueOf(review_id));
-	System.out.println("Game to delete on back end: " + reviewToDelete);
-	System.out.println();
 	reviewManager.deleteReview(Long.valueOf(review_id));
 	return new ResponseEntity<>(reviewToDelete, HttpStatus.OK);
     }
 
     @RequestMapping(value = MGL_Endpoint_Constants.UPDATE_REVIEW, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> updateReview(@RequestBody Review review) {
-	System.out.println("inside of update review on backend: review:" + review.toString());
 	return new ResponseEntity<>(reviewManager.saveReview(review), HttpStatus.OK);
     }
 
@@ -63,7 +58,6 @@ public class Review_Controller {
 
     @RequestMapping(value = MGL_Endpoint_Constants.ADD_REVIEW, method = RequestMethod.POST)
     public ResponseEntity<Review> addReview(@RequestBody Review review) {
-	System.out.println("REVIEW OBJECT INSIDE OF BACKEND: " + review.toString());
 	if (review.getReview_author().equals("")) {
 	    review.setReview_author("anonymous");
 	}
@@ -72,8 +66,6 @@ public class Review_Controller {
 
     @RequestMapping(value = MGL_Endpoint_Constants.FETCH_REVIEWS_FOR_GAME, method = RequestMethod.PUT)
     public ResponseEntity<List<Review>> fetchReviewsForGame(@RequestBody String review_game_id) {
-	System.out.println("@$#@#$ inside of fetchReviewsForGame with review_game_id: " + review_game_id);
-
 	return new ResponseEntity<>(reviewManager.getReviews(Long.valueOf(review_game_id)), HttpStatus.OK);
     }
 

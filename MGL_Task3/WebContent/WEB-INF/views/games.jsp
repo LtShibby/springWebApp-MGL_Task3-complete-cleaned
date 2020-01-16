@@ -69,7 +69,7 @@ body {
 							</tr>
 							<tr>
 								<td>
-									<label class="col-md-2 control-lable text-light" for="game_releaseDate">Game Release Date (yyyy-MM-dd)</label>
+									<label class="col-md-2 control-lable text-light" for="game_releaseDate">Game Release Date* (yyyy-MM-dd)*</label>
 									<div class="col-md-9">
 										<input type="text" ng-model="MGL_T3_ctrl.game.game_releaseDate" id="game_releaseDate" class="form-control input-sm" placeholder="Enter relase date of the new game  (yyyy-MM-dd)" />
 									</div>
